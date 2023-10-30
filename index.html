@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="APP" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-starturl" content="/" />
+    <meta name="theme-color" content="#ebebeb" id="_theme-color" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" href="./icons/logo.png" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="shortcut icon" href="./icons/logo.png" type="image/png" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+    <script defer src="./sw.js"></script>
+    <title>APP</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="title-bar"></div>
+      <h1>PWA</h1>
+      <button id="install" hidden>Install</button>
+    </div>
+    <script defer>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./sw.js")
+            .then((reg) => {})
+            .catch((error) =>
+              console.log(`%cFailure: ${error}`, "color:orangered")
+            );
+        });
+      }
+    </script>
+  </body>
+</html>

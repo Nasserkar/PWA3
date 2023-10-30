@@ -1,0 +1,44 @@
+{
+  "short_name": "APP",
+  "name": "APP",
+  "start_url": "./index.html",
+  "id": "?homescreen=1",
+  "display_override": ["window-controls-overlay"],
+  "display": "standalone",
+  "description": "APP",
+  "theme_color": "#ebebeb",
+  "background_color": "#8c7cf7",
+  "orientation": "any",
+  "scope": ".",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "./icons/logo.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/splash.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./icons/splash.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Homescreen of Awesome App"
+    },
+    {
+      "src": "./icons/splash.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "List of Awesome Resources available in Awesome App"
+    }
+  ]
+}
